@@ -4,8 +4,10 @@ import javax.swing.*;
 
 public class Ventana extends JFrame { //La clase ventana hereda atributos de la clase JFrame
     public Ventana(){
-        setSize(500,500); //Dimensiones de la ventana
+        setSize(850,600); //Dimensiones de la ventana
+        setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se establece un Stop a la ventana, una vez se clickee en la X
-        setTitle("Ventana de Juego"); // Establecer titulo para la ventana
+        setTitle("FIGURAS :)"); // Establecer titulo para la ventana
+
     }
 }
