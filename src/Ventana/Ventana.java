@@ -1,7 +1,8 @@
 package Ventana;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+
+
 import java.awt.*;
 
 public class Ventana extends JFrame { //La clase ventana hereda atributos de la clase JFrame
@@ -18,7 +19,14 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
     }
     private void iniciarComponentes(){
         JPanel panel = new JPanel(); //Creacion del panel
-
-        this.getContentPane().add(panel); //Agregamos el panel a la ventana
+        //panel.setBackground(Color.BLUE); Establecer color para el panel
+        panel.setLayout(null); // Desactivando el Layout
+        this.getContentPane().add(panel); //Agregar el panel a la ventana
+        JButton botonPlay= new JButton("Jugar");//Crear el boton de jugar
+        botonPlay.setForeground(Color.BLUE); //Establecer color de la letra
+        botonPlay.setOpaque(true);
+        botonPlay.setBackground(Color.white);
+        botonPlay.setBounds(10,10,20,50);
+        this.getContentPane().add(botonPlay);
     }
 }
