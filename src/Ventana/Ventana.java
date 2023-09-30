@@ -3,6 +3,8 @@ package Ventana;
 import javax.swing.*;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame { //La clase ventana hereda atributos de la clase JFrame
     //CREANDO LA VENTANA Y SUS DIMENSIONES
@@ -20,7 +22,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
     //CREANDO EL JPANEL PARA UBICAR TODOS LOS COMPONENTES
     private void iniciarComponentes(){
         JPanel panel = new JPanel(); //Creacion del panel
-        //panel.setBackground(Color.BLUE); Establecer color para el panel
+        //panel.setBackground(Color.RGBtoHSB(6,6,6,10,)); //Establecer color para el panel
         panel.setLayout(null); // Desactivando el Layout
         this.getContentPane().add(panel); //Agregar el panel a la ventana
 
@@ -32,8 +34,8 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         botonPlay.setFont(new Font("arial",0,30)); //Asignar
         botonPlay.setOpaque(true);
         botonPlay.setBackground(Color.black);
-        panel.add(botonPlay);// Se agrega el boton "jugar al panel"
-
+        panel.add(botonPlay);// Se agrega el boton "jugar al panel"botonPlay.addActionListener(new ActionListener()
+        
         //INTRUCCIONES
         JButton botonInstrucc = new JButton("Instrucciones");//Crear el boton de instrucciones
         botonInstrucc.setBounds(365,250,220,40); //ubicacion y tamano del boton "instrucciones"
@@ -49,5 +51,12 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         figura1.setBounds(-20,325,260,300);
         figura1.setIcon(new ImageIcon(triangulo.getImage().getScaledInstance(figura1.getWidth(),figura1.getHeight(), Image.SCALE_SMOOTH)));
         panel.add(figura1);
+
+        ImageIcon circulo = new ImageIcon("circulo.png");
+        JLabel figura2 = new JLabel(new ImageIcon("circulo.png")); //Creando el objeto figura.
+        figura2.setBounds(300,365,250,200);
+        figura2.setIcon(new ImageIcon(circulo.getImage().getScaledInstance(figura2.getWidth(),figura2.getHeight(), Image.SCALE_SMOOTH)));
+        panel.add(figura2);
+
     }
 }
