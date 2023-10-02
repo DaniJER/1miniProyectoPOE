@@ -1,18 +1,12 @@
 package Ventana;
 import javax.swing.*;
 
-public class Player {
-    String playerName;
-
-
+public class Player extends Ventana{
+    //METODOS:
     public void askName(){
-        JOptionPane.showInputDialog("Ingresa tu nombre: ");
+        //Colocar cajas de texto
+        JTextField cajaTexto = new JTextField();
+        cajaTexto.setBounds(50,50,100,30);
+        cajaTexto.setText("Ingresa tu nombre");
     }
-    public void playGame(){
-        //Boton para iniciar el juego
-    }
-    public void exitGame(){
-        //Boton para salir del juego
-    }
-
 }
