@@ -55,7 +55,8 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
                 ConfigGame configuracion = new ConfigGame();
                 configuracion.setVisible(true);
                 configuracion.showInstructions();
-                configuracion.botonn();
+                configuracion.jugarButonn();
+                configuracion.volverButton();
             }
         };
         botonInstrucc.addActionListener(capturarAccion);

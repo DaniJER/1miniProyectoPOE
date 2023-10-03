@@ -40,7 +40,7 @@ public class ConfigGame extends JFrame {
         return text;
     }
 
-    public void botonn() {
+    public void jugarButonn() {
         JButton jugarButton = new JButton("Jugar");
         jugarButton.setBounds(400, 260, 120,50);
         jugarButton.setEnabled(true);
@@ -55,7 +55,23 @@ public class ConfigGame extends JFrame {
             dispose();
 
         }
+    };
+
+    public void volverButton() {
+        JButton volverButton = new JButton("Volver");
+        volverButton.setBounds(430, 300, 120,50);
+        volverButton.setEnabled(true);
+        volverButton.setFont(new Font("Assistant", Font.BOLD, 15));
+        volverButton.setBackground(Color.blue);
+        panel.add(volverButton);
     }
-    jugarButton.addActionListener(playButton);
+
+    ActionListener volverButton = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            dispose();
+
+        }
+    };
 }
 
