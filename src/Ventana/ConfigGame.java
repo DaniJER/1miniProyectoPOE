@@ -71,12 +71,6 @@ public class ConfigGame extends JFrame {
     };
 
 
-<<<<<<< HEAD
-        }
-    };
-    //jugarButton.addActionListener(playButton);
-=======
-
     public JButton volverButton() {
         JButton volverButton = new JButton("Volver");
         volverButton.setBounds(400, 320, 120,50);
@@ -86,6 +80,7 @@ public class ConfigGame extends JFrame {
         panel.add(volverButton);
         return volverButton;
     };
->>>>>>> ConfigGame
-}
+};
+
+
 
