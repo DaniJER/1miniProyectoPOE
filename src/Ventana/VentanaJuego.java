@@ -4,10 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class VentanaJuego extends JFrame {
+    private String name;
+    private String prueba = "esto es una prueba";
     public JPanel panelGame;
 
     //CREANDO LA VENTANA Y SUS DIMENSIONES
-    public VentanaJuego() {
+    public VentanaJuego(String name) {
+        this.name = name;
         setSize(950, 600); //Dimensiones de la ventana
         setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
         setResizable(true); //Metodo para establecer si se redimensiona la ventana o no. el valor es booleano.
@@ -25,11 +28,11 @@ public class VentanaJuego extends JFrame {
         this.add(panelGame); //Agregar el panel a la ventana
     }
 
-    public JLabel jLabel (String name) {
-            JLabel namePlayer = new JLabel();
-            namePlayer.setBounds(80, 20, 380, 50);
+    public JLabel jLabel () {
+            JLabel namePlayer = new JLabel(name);
+            namePlayer.setBounds(200, 200, 380, 50);
             namePlayer.setFont(new Font("arial", 0, 25));
-            namePlayer.setText(name);
+            //namePlayer.setText(name);
             namePlayer.setForeground(Color.black);
             panelGame.add(namePlayer);
             return namePlayer;

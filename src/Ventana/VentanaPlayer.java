@@ -6,7 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaPlayer extends JFrame{
-    private String nombre;
+    private String name, nombre;
+    private JTextField cajaTexto;
     public JPanel panelPlayer;
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -57,12 +58,12 @@ public class VentanaPlayer extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                getTextPlayer(setNombre());
-                VentanaJuego ventanaJuego = new VentanaJuego();
-                ventanaJuego.jLabel(getTextPlayer().getText());
+                name = cajaTexto.getText();
+                VentanaJuego ventanaJuego = new VentanaJuego(name);
+                ventanaJuego.jLabel();
                 ventanaJuego.setVisible(true);
-            }
 
+            }
         };
         buttonAcept().addActionListener(aceptar);
     }
@@ -76,12 +77,11 @@ public class VentanaPlayer extends JFrame{
             panelPlayer.add(texto);
             return texto;
         };
+
         public JTextField getTextPlayer () {
-            JTextField cajaTexto = new JTextField();
+            cajaTexto = new JTextField();
             cajaTexto.setBounds(345, 265, 250, 40);
             cajaTexto.setFont(new Font("arial", 0, 30));
-            String name = cajaTexto.getText();
-            cajaTexto.setText(name);
             cajaTexto.setBackground(Color.lightGray);
             panelPlayer.add(cajaTexto);
             return cajaTexto;

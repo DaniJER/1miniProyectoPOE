@@ -48,7 +48,9 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
                 juego.buttonAcept();
                 juego.buttonCancel();
                 juego.getTextPlayer();
+                juego.text1();
                 juego.setVisible(true);
+
             }
         };
         botonPlay.addActionListener(jugar);
