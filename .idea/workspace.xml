@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f9395be-cea9-4490-b039-82ab05cc62ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Player.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/VentanaPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/VentanaPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventana/ConfigGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana/ConfigGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana/Ventana.java" afterDir="false" />
     </list>

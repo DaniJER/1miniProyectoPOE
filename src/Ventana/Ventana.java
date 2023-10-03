@@ -53,10 +53,10 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 ConfigGame configuracion = new ConfigGame();
-                configuracion.setVisible(true);
                 configuracion.showInstructions();
                 configuracion.jugarButonn();
                 configuracion.volverButton();
+                configuracion.setVisible(true);
             }
         };
         botonInstrucc.addActionListener(capturarAccion);
