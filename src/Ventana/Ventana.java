@@ -30,7 +30,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
 
         //CREANDO EL BOTON DE JUGAR E INSTRUCCIONES
         //JUGAR
-        JButton botonPlay= new JButton("Jugar");//Crear el boton de jugar
+        JButton botonPlay = new JButton("Jugar");//Crear el boton de jugar
         botonPlay.setHorizontalAlignment(SwingConstants.CENTER);
         botonPlay.setBounds(405,200,130,40); //ubicacion y tamano del boton "jugar"
         botonPlay.setForeground(Color.white); //Establecer color de la letra
@@ -38,7 +38,21 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         botonPlay.setOpaque(true);
         botonPlay.setBackground(Color.black);
         panel.add(botonPlay);// Se agrega el boton "jugar al panel"botonPlay.addActionListener(new ActionListener()
-        
+        // ACTIONLISTENER
+        ActionListener jugar = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                VentanaPlayer juego = new VentanaPlayer();
+                juego.getTextPlayer();
+                juego.text();
+                juego.buttonAcept();
+                juego.buttonCancel();
+                juego.setVisible(true);
+            }
+        };
+        botonPlay.addActionListener(jugar);
+
         //INTRUCCIONES
         JButton botonInstrucc = new JButton("Instrucciones");//Crear el boton de instrucciones
         botonInstrucc.setHorizontalAlignment(SwingConstants.CENTER);
@@ -61,10 +75,6 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         figura2.setBounds(300,365,250,200);
         figura2.setIcon(new ImageIcon(circulo.getImage().getScaledInstance(figura2.getWidth(),figura2.getHeight(), Image.SCALE_SMOOTH)));
         panel.add(figura2);
-
-        Player jugador = new Player();
-        jugador.askName();
-        panel.add(jugador);
 
 
     }
