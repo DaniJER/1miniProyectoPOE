@@ -9,8 +9,6 @@ public class Principal {
         //VentanaPlayer player1 = new VentanaPlayer();
         //player1.setVisible(true);
 
-
-
         }
 
     }

@@ -6,7 +6,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaPlayer extends JFrame{
-    public JPanel panelJuego;
+    private String name, nombre;
+    private JTextField cajaTexto;
+    public JPanel panelPlayer;
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    };
+    public String getNombre(){
+        return nombre;
+    }
     //CREANDO LA VENTANA DONDE SE DIGITARA EL NOMBRE
     public VentanaPlayer(){
         setSize(950,600); //Dimensiones de la ventana
@@ -16,14 +24,14 @@ public class VentanaPlayer extends JFrame{
         //setMaximumSize(new Dimension()); En caso de que se quiera establecer un tamaño maximo
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se establece un Stop a la ventana, una vez se clickee en la X
         setTitle("FIGURAS :)"); // Establecer titulo para la ventana
-        this.getContentPane() .setBackground(Color.gray); //Obtener el contenido de la ventana y establecer un color a su background
+        this.getContentPane() .setBackground(Color.white); //Obtener el contenido de la ventana y establecer un color a su background
         componentes();
     }
     private void componentes() {
-        panelJuego = new JPanel(); //Creacion del panel
+        panelPlayer = new JPanel(); //Creacion del panel
         //panel.setBackground(Color.RGBtoHSB(6,6,6,10,)); //Establecer color para el panel
-        panelJuego.setLayout(null); // Desactivando el Layout
-        this.add(panelJuego); //Agregar el panel a la ventana
+        panelPlayer.setLayout(null); // Desactivando el Layout
+        this.add(panelPlayer); //Agregar el panel a la ventana
 
         ImageIcon circulo = new ImageIcon("circulo.png");
         JLabel figura2 = new JLabel(new ImageIcon("circulo.png")); //Creando el objeto figura.
@@ -31,9 +39,9 @@ public class VentanaPlayer extends JFrame{
         figura2.setIcon(new ImageIcon(circulo.getImage().getScaledInstance(figura2.getWidth(), figura2.getHeight(), Image.SCALE_SMOOTH)));
         figura2.setBackground(Color.CYAN);
         figura2.setVisible(true);
-        panelJuego.add(figura2);
+        panelPlayer.add(figura2);
 
-        //Accion para clicker en el boton 'cancelar' y volver al menu principal
+        //ACTION PARA CLICKEAR Y EN EL BOTON CANCELAR Y VOLVER AL MENU PRINCIPAL
         ActionListener cancelar = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,33 +51,50 @@ public class VentanaPlayer extends JFrame{
             }
         };
         buttonCancel().addActionListener(cancelar);
+
+        //ACTION PARA CLICKEAR EL BOTON ACEPTAR Y ENTRAR A LA VENTANA DEL JUEGO
+
+        ActionListener aceptar = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                name = cajaTexto.getText();
+                VentanaJuego ventanaJuego = new VentanaJuego(name);
+                ventanaJuego.jLabel();
+                ventanaJuego.setVisible(true);
+
+            }
+        };
+        buttonAcept().addActionListener(aceptar);
     }
+    private JTextField obtenerNombre;
         public JLabel text () {
             JLabel texto = new JLabel();
             texto.setBounds(345, 185, 350, 40);
             texto.setFont(new Font("arial", 0, 35));
             texto.setText("Digite su nombre");
             texto.setForeground(Color.black);
-            panelJuego.add(texto);
+            panelPlayer.add(texto);
             return texto;
         };
+
         public JTextField getTextPlayer () {
-            JTextField cajaTexto = new JTextField();
+            cajaTexto = new JTextField();
             cajaTexto.setBounds(345, 265, 250, 40);
             cajaTexto.setFont(new Font("arial", 0, 30));
-            cajaTexto.setText("");
             cajaTexto.setBackground(Color.lightGray);
-            panelJuego.add(cajaTexto);
+            panelPlayer.add(cajaTexto);
             return cajaTexto;
         };
+
         public JButton buttonAcept (){
-            JButton buttonACept = new JButton();
-            buttonACept.setText("Aceptar");
-            buttonACept.setBounds(345, 330, 110, 40);
-            buttonACept.setBackground(Color.lightGray);
-            buttonACept.setForeground(Color.BLACK);
-            panelJuego.add(buttonACept);
-            return buttonACept;
+            JButton buttonAcept = new JButton();
+            buttonAcept.setText("Aceptar");
+            buttonAcept.setBounds(345, 330, 110, 40);
+            buttonAcept.setBackground(Color.lightGray);
+            buttonAcept.setForeground(Color.BLACK);
+            panelPlayer.add(buttonAcept);
+            return buttonAcept;
         };
 
         public JButton buttonCancel (){
@@ -78,7 +103,7 @@ public class VentanaPlayer extends JFrame{
             buttonCancel.setBounds(475, 330, 110, 40);
             buttonCancel.setBackground(Color.LIGHT_GRAY);
             buttonCancel.setForeground(Color.BLACK);
-            panelJuego.add(buttonCancel);
+            panelPlayer.add(buttonCancel);
             return buttonCancel;
 
         };

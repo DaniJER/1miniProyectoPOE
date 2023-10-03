@@ -18,7 +18,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         //setMaximumSize(new Dimension()); En caso de que se quiera establecer un tamaño maximo
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se establece un Stop a la ventana, una vez se haga click en la X
         setTitle("FIGURAS :)"); // Establecer titulo para la ventana
-        this.getContentPane() .setBackground(Color.gray); //Obtener el contenido de la ventana y establecer un color a su background
+        this.getContentPane() .setBackground(Color.white); //Obtener el contenido de la ventana y establecer un color a su background
         iniciarComponentes();
     }
     //CREANDO EL JPANEL PARA UBICAR TODOS LOS COMPONENTES
@@ -38,6 +38,22 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         botonPlay.setOpaque(true);
         botonPlay.setBackground(Color.black);
         panel.add(botonPlay);// Se agrega el boton "jugar al panel"botonPlay.addActionListener(new ActionListener()
+
+        // ACTIONLISTENER
+        ActionListener jugar = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                VentanaPlayer juego = new VentanaPlayer();
+                juego.text();
+                juego.buttonAcept();
+                juego.buttonCancel();
+                juego.getTextPlayer();
+                juego.setVisible(true);
+
+            }
+        };
+        botonPlay.addActionListener(jugar);
 
         //INSTRUCCIONES
         JButton botonInstrucc = new JButton("Instrucciones");//Crear el boton de instrucciones
