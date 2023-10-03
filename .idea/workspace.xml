@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f9395be-cea9-4490-b039-82ab05cc62ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_1_2023_6_14_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/ConfigGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Principal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/Ventana.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/VentanaPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniProyectoPOE1/Ventana/VentanaPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventana/ConfigGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana/ConfigGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +72,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0858e975-c91c-4947-a8ab-e0c2058601c0" name="Changes" comment="" />
+      <changelist id="9f9395be-cea9-4490-b039-82ab05cc62ab" name="Changes" comment="" />
       <created>1695876308882</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695876308882</updated>
       <workItem from="1695876310443" duration="1111000" />
       <workItem from="1696197128093" duration="2558000" />
+      <workItem from="1696345442217" duration="2869000" />
     </task>
     <servers />
   </component>

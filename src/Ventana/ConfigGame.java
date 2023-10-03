@@ -26,6 +26,26 @@ public class ConfigGame extends JFrame {
         panel.setLayout(null);
         panel.setBackground(Color.white);
         this.add(panel);
+
+        ActionListener playButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+            }
+        };
+        jugarButonn().addActionListener(playButton);
+
+
+        ActionListener volver = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                Ventana principalWindow = new Ventana();
+                principalWindow.setVisible(true);
+            }
+        };
+        volverButton().addActionListener(volver);
     }
 
     public JLabel showInstructions(){
@@ -40,22 +60,27 @@ public class ConfigGame extends JFrame {
         return text;
     }
 
-    public void botonn() {
+    public JButton jugarButonn() {
         JButton jugarButton = new JButton("Jugar");
         jugarButton.setBounds(400, 260, 120,50);
         jugarButton.setEnabled(true);
         jugarButton.setFont(new Font("Assistant", Font.BOLD, 15));
         jugarButton.setBackground(Color.gray);
         panel.add(jugarButton);
-    }
-
-    ActionListener playButton = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            dispose();
-
-        }
+        return jugarButton;
     };
-    //jugarButton.addActionListener(playButton);
-}
+
+
+    public JButton volverButton() {
+        JButton volverButton = new JButton("Volver");
+        volverButton.setBounds(400, 320, 120,50);
+        volverButton.setEnabled(true);
+        volverButton.setFont(new Font("Assistant", Font.BOLD, 15));
+        volverButton.setBackground(Color.gray);
+        panel.add(volverButton);
+        return volverButton;
+    };
+};
+
+
 
