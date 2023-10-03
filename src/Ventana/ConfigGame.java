@@ -31,7 +31,12 @@ public class ConfigGame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-
+                VentanaPlayer text = new VentanaPlayer();
+                text.text();
+                text.getTextPlayer();
+                text.buttonAcept();
+                text.buttonCancel();
+                text.setVisible(true);
             }
         };
         jugarButonn().addActionListener(playButton);
