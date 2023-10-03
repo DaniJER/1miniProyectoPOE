@@ -53,7 +53,7 @@ public class ConfigGame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             dispose();
-            
+
         }
     }
     jugarButton.addActionListener(playButton);
