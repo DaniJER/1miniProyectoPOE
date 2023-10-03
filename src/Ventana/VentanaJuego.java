@@ -2,10 +2,23 @@ package Ventana;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.Buffer;
+import javax.imageio.ImageIO;
 
 public class VentanaJuego extends JFrame {
     private String name;
-    private String prueba = "esto es una prueba";
+
+    private BufferedImage[] imagenes = new BufferedImage[4];
+    public void setImagenes(BufferedImage[] imagenes){
+        this.imagenes = imagenes;
+    };
+    public BufferedImage[] getImagenes(){
+      return imagenes;
+    };
+
     public JPanel panelGame;
 
     //CREANDO LA VENTANA Y SUS DIMENSIONES
@@ -30,12 +43,40 @@ public class VentanaJuego extends JFrame {
 
     public JLabel jLabel () {
             JLabel namePlayer = new JLabel(name);
-            namePlayer.setBounds(200, 200, 380, 50);
+            namePlayer.setBounds(100, 10, 380, 50);
             namePlayer.setFont(new Font("arial", 0, 25));
             //namePlayer.setText(name);
             namePlayer.setForeground(Color.black);
+            namePlayer.setText("Jugador: "+ name);
             panelGame.add(namePlayer);
             return namePlayer;
         }
+    //Rutas de imagenes
+    String[] rutas = {
+            "circulo.png",
+            "cuadrado.png",
+            "rectangulo.png",
+            "triangulo.png"
+    };
+
+
+
+
+    //FIGURAS EN EL JUEGO
+    ImageIcon circulo = new ImageIcon("circulo.png");
+    JLabel circulo1 = new JLabel(new ImageIcon("circulo.png"));
+
+
+    ImageIcon rectangulo = new ImageIcon("rectangulo.png");
+    JLabel rectangulo1 = new JLabel(new ImageIcon("rectangulo.png"));
+
+    ImageIcon triangulo = new ImageIcon("triangulo.png");
+    JLabel triangulo1 = new JLabel(new ImageIcon("triangulo.png"));
+
+    ImageIcon cuadrado = new ImageIcon("cuadrado.png");
+    JLabel cuadrado1 = new JLabel(new ImageIcon("cuadrado.png"));
+
+
+
 
 }

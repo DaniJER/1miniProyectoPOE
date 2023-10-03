@@ -67,6 +67,7 @@ public class VentanaPlayer extends JFrame{
         };
         buttonAcept().addActionListener(aceptar);
     }
+
     private JTextField obtenerNombre;
         public JLabel text () {
             JLabel texto = new JLabel();
@@ -107,8 +108,6 @@ public class VentanaPlayer extends JFrame{
             return buttonCancel;
 
         };
-
-
 
 
 };
