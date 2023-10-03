@@ -55,7 +55,7 @@ public class ConfigGame extends JFrame {
             dispose();
 
         }
-    }
-    jugarButton.addActionListener(playButton);
+    };
+    //jugarButton.addActionListener(playButton);
 }
 
