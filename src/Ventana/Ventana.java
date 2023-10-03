@@ -50,10 +50,8 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
                 dispose();
                 ConfigGame configuracion = new ConfigGame();
                 configuracion.setVisible(true);
-
-                ConfigGame instructions = new ConfigGame();
-                instructions.showInstructions();
-                instructions.setVisible(true);
+                configuracion.showInstructions();
+                configuracion.botonn();
             }
         };
         botonInstrucc.addActionListener(capturarAccion);
