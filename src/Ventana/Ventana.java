@@ -18,7 +18,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
         //setMaximumSize(new Dimension()); En caso de que se quiera establecer un tamaño maximo
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se establece un Stop a la ventana, una vez se clickee en la X
         setTitle("FIGURAS :)"); // Establecer titulo para la ventana
-        this.getContentPane() .setBackground(Color.gray); //Obtener el contenido de la ventana y establecer un color a su background
+        this.getContentPane() .setBackground(Color.white); //Obtener el contenido de la ventana y establecer un color a su background
         iniciarComponentes();
     }
     //CREANDO EL JPANEL PARA UBICAR TODOS LOS COMPONENTES
@@ -44,10 +44,10 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 VentanaPlayer juego = new VentanaPlayer();
-                juego.getTextPlayer();
                 juego.text();
                 juego.buttonAcept();
                 juego.buttonCancel();
+                juego.getTextPlayer();
                 juego.setVisible(true);
             }
         };
