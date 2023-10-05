@@ -46,7 +46,7 @@ public class GameSettings extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                Ventana principalWindow = new Ventana();
+                Window principalWindow = new Window();
                 principalWindow.setVisible(true);
             }
         };

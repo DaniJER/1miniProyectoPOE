@@ -62,7 +62,6 @@ public class PlayerWindow extends JFrame{
                 GameWindow ventanaJuego = new GameWindow(name);
                 ventanaJuego.jLabel();
                 ventanaJuego.setVisible(true);
-
             }
         };
         buttonAcept().addActionListener(aceptar);
