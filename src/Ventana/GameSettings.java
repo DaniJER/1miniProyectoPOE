@@ -9,9 +9,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ConfigGame extends JFrame {
+public class GameSettings extends JFrame {
     public JPanel panel;
-    public ConfigGame(){
+    public GameSettings(){
         setSize(950,600); //Dimensiones de la ventana
         setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
         setResizable(true); //Metodo para establecer si se redimensiona la ventana o no. el valor es booleano.
@@ -31,7 +31,7 @@ public class ConfigGame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                VentanaPlayer text = new VentanaPlayer();
+                PlayerWindow text = new PlayerWindow();
                 text.text();
                 text.getTextPlayer();
                 text.buttonAcept();

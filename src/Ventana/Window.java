@@ -7,10 +7,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Ventana extends JFrame { //La clase ventana hereda atributos de la clase JFrame
+public class Window extends JFrame { //La clase ventana hereda atributos de la clase JFrame
     public JPanel panel;
     //CREANDO LA VENTANA Y SUS DIMENSIONES
-    public Ventana(){
+    public Window(){
         setSize(950,600); //Dimensiones de la ventana
         setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
         setResizable(true); //Metodo para establecer si se redimensiona la ventana o no. el valor es booleano.
@@ -44,7 +44,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                VentanaPlayer juego = new VentanaPlayer();
+                PlayerWindow juego = new PlayerWindow();
                 juego.text();
                 juego.buttonAcept();
                 juego.buttonCancel();
@@ -68,7 +68,7 @@ public class Ventana extends JFrame { //La clase ventana hereda atributos de la 
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                ConfigGame configuracion = new ConfigGame();
+                GameSettings configuracion = new GameSettings();
                 configuracion.showInstructions();
                 configuracion.jugarButonn();
                 configuracion.volverButton();

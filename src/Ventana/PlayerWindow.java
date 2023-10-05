@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class WindowPlayer extends JFrame{
+public class PlayerWindow extends JFrame{
     private String name, nombre;
     private JTextField cajaTexto;
     public JPanel panelPlayer;
@@ -16,7 +16,7 @@ public class WindowPlayer extends JFrame{
         return nombre;
     }
     //CREANDO LA VENTANA DONDE SE DIGITARA EL NOMBRE
-    public WindowPlayer(){
+    public PlayerWindow(){
         setSize(950,600); //Dimensiones de la ventana
         setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
         setResizable(true); //Metodo para establecer si se redimensiona la ventana o no. el valor es booleano.

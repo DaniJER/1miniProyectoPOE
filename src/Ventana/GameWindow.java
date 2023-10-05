@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class VentanaJuego extends JFrame {
+public class GameWindow extends JFrame {
     private String name;
 
     private BufferedImage[] imagenes = new BufferedImage[4];
@@ -18,7 +18,7 @@ public class VentanaJuego extends JFrame {
     public JPanel panelGame;
 
     //CREANDO LA VENTANA Y SUS DIMENSIONES
-    public VentanaJuego(String name) {
+    public GameWindow(String name) {
         this.name = name;
         setSize(950, 600); //Dimensiones de la ventana
         setLocationRelativeTo(null); //Establecer la ubicacion de la ventana en el centro de la pantalla
