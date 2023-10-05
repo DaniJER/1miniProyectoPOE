@@ -3,10 +3,6 @@ package Ventana;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.nio.Buffer;
-import javax.imageio.ImageIO;
 
 public class VentanaJuego extends JFrame {
     private String name;
