@@ -1,6 +1,5 @@
 # Default ignored files
 /shelf/
-src/Main.java
 # Intellij
 .idea/
 *.iml
