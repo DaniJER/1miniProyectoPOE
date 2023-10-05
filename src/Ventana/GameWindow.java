@@ -32,14 +32,22 @@ public class GameWindow extends JFrame {
     }
     private void iniciarComponentes() {
         panelGame = new JPanel(); //Creacion del panel
-        //panel.setBackground(Color.RGBtoHSB(6,6,6,10,)); //Establecer color para el panel
         panelGame.setLayout(null); // Desactivando el Layout
         this.add(panelGame); //Agregar el panel a la ventana
+
+        ImageIcon linea = new ImageIcon("Images/linea2.png");
+        JLabel lineaEnJuego = new JLabel(new ImageIcon("Images/linea2.png"));
+        lineaEnJuego.setBounds(150,150,200,100);
+        lineaEnJuego.setBackground(Color.BLACK);
+        lineaEnJuego.setIcon(new ImageIcon(linea.getImage().getScaledInstance(lineaEnJuego.getWidth(),lineaEnJuego.getHeight(), Image.SCALE_SMOOTH)));
+        panelGame.add(lineaEnJuego);
+
+
     }
 
     public JLabel jLabel () {
             JLabel namePlayer = new JLabel(name);
-            namePlayer.setBounds(100, 10, 380, 50);
+            namePlayer.setBounds(600, 10, 380, 50);
             namePlayer.setFont(new Font("arial", 0, 25));
             //namePlayer.setText(name);
             namePlayer.setForeground(Color.black);
@@ -47,31 +55,4 @@ public class GameWindow extends JFrame {
             panelGame.add(namePlayer);
             return namePlayer;
         }
-    //Rutas de imagenes
-    String[] rutas = {
-            "circulo.png",
-            "cuadrado.png",
-            "rectangulo.png",
-            "triangulo.png"
-    };
-
-
-
-
-    //FIGURAS EN EL JUEGO
-    ImageIcon circulo = new ImageIcon("circulo.png");
-    JLabel circulo1 = new JLabel(new ImageIcon("circulo.png"));
-
-
-    ImageIcon rectangulo = new ImageIcon("rectangulo.png");
-    JLabel rectangulo1 = new JLabel(new ImageIcon("rectangulo.png"));
-
-    ImageIcon triangulo = new ImageIcon("triangulo.png");
-    JLabel triangulo1 = new JLabel(new ImageIcon("triangulo.png"));
-
-    ImageIcon cuadrado = new ImageIcon("cuadrado.png");
-    JLabel cuadrado1 = new JLabel(new ImageIcon("cuadrado.png"));
-
-
-
 }
