@@ -6,15 +6,6 @@ import java.awt.image.BufferedImage;
 
 public class GameWindow extends JFrame {
     private String name;
-
-    private BufferedImage[] imagenes = new BufferedImage[4];
-    public void setImagenes(BufferedImage[] imagenes){
-        this.imagenes = imagenes;
-    };
-    public BufferedImage[] getImagenes(){
-      return imagenes;
-    };
-
     public JPanel panelGame;
 
     //CREANDO LA VENTANA Y SUS DIMENSIONES
@@ -28,19 +19,20 @@ public class GameWindow extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se establece un Stop a la ventana, una vez se clickee en la X
         setTitle("FIGURAS :)"); // Establecer titulo para la ventana
         this.getContentPane().setBackground(Color.white); //Obtener el contenido de la ventana y establecer un color a su background
-        iniciarComponentes(); // Llamo al metodo iniciar componentes para que el panel haga parte de la ventana
+        iniciarComponentesJuego(); // Llamo al metodo iniciar componentes para que el panel haga parte de la ventana
     }
-    private void iniciarComponentes() {
+    private void iniciarComponentesJuego() {
         panelGame = new JPanel(); //Creacion del panel
         panelGame.setLayout(null); // Desactivando el Layout
         this.add(panelGame); //Agregar el panel a la ventana
 
-        ImageIcon linea = new ImageIcon("Images/linea2.png");
-        JLabel lineaEnJuego = new JLabel(new ImageIcon("Images/linea2.png"));
-        lineaEnJuego.setBounds(150,150,200,100);
-        lineaEnJuego.setBackground(Color.BLACK);
-        lineaEnJuego.setIcon(new ImageIcon(linea.getImage().getScaledInstance(lineaEnJuego.getWidth(),lineaEnJuego.getHeight(), Image.SCALE_SMOOTH)));
-        panelGame.add(lineaEnJuego);
+       
+        //AGREGANDO LINEA QUE SEPERA LA FIGURA CORRECTA DE LAS DEMAS OPCIONESS
+        ImageIcon triangulo = new ImageIcon("linea2.png");
+        JLabel figura1 = new JLabel(new ImageIcon("linea2.png")); //Creando el objeto figura.
+        figura1.setBounds(100,-20,260,600);
+        figura1.setIcon(new ImageIcon(triangulo.getImage().getScaledInstance(figura1.getWidth(),figura1.getHeight(), Image.SCALE_SMOOTH)));
+        panelGame.add(figura1);
 
 
     }
