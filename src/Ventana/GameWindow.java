@@ -44,15 +44,36 @@ public class GameWindow extends JFrame {
 
 
     }
-
-    public JLabel jLabel () {
-            JLabel namePlayer = new JLabel(name);
-            namePlayer.setBounds(600, 10, 380, 50);
-            namePlayer.setFont(new Font("arial", 0, 25));
-            //namePlayer.setText(name);
-            namePlayer.setForeground(Color.black);
-            namePlayer.setText("Jugador: "+ name);
-            panelGame.add(namePlayer);
-            return namePlayer;
+    //LABEL PARA MOSTRAR EL NOMBRE DEL JUGADOR EN LA VENTANA DEL JUEGO
+    public JLabel playerName () {
+            JLabel showName = new JLabel(name);
+            showName.setBounds(500, 10, 380, 50);
+            showName.setFont(new Font("arial", 0, 25));
+            showName.setForeground(Color.black);
+            showName.setText("Jugador: "+ name);
+            panelGame.add(showName);
+            return showName;
         }
-}
+
+     //LABEL PARA MOSTRAR LOS ACIERTOS DEL JUGADOR (FALTA LA LOGICA)   
+     public JLabel showScore () {
+            JLabel showScore1 = new JLabel(name);
+            showScore1.setBounds(550, 520, 380, 50);
+            showScore1.setFont(new Font("arial", 0, 25));
+            showScore1.setForeground(Color.black);
+            showScore1.setText("Aciertos: "+ "02");
+            panelGame.add(showScore1);
+            return showScore1;
+        }
+
+        public JLabel showFailures () {
+            JLabel showFailures1 = new JLabel(name);
+            showFailures1.setBounds(730, 520, 380, 50);
+            showFailures1.setFont(new Font("arial", 0, 25));
+            showFailures1.setForeground(Color.black);
+            showFailures1.setText("Fallos: "+ "02");
+            panelGame.add(showFailures1);
+            return showFailures1;
+        };
+    
+};

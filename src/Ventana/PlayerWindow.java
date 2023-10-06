@@ -60,14 +60,15 @@ public class PlayerWindow extends JFrame{
                 dispose();
                 name = cajaTexto.getText();
                 GameWindow ventanaJuego = new GameWindow(name);
-                ventanaJuego.jLabel();
+                ventanaJuego.playerName();
+                ventanaJuego.showScore();
+                ventanaJuego.showFailures();
                 ventanaJuego.setVisible(true);
             }
         };
         buttonAcept().addActionListener(aceptar);
     }
 
-    private JTextField obtenerNombre;
         public JLabel text () {
             JLabel texto = new JLabel();
             texto.setBounds(345, 185, 350, 40);
