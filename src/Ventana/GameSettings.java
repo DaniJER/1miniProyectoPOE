@@ -84,7 +84,7 @@ public class GameSettings extends JFrame {
         volverButton.setBackground(Color.gray);
         panel.add(volverButton);
         return volverButton;
-    };
+    }
 };
 
 

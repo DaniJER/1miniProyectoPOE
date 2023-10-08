@@ -10,5 +10,4 @@ public class Principal {
         //player1.setVisible(true);
 
         }
-
     }

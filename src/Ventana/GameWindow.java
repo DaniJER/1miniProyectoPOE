@@ -2,7 +2,8 @@ package Ventana;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GameWindow extends JFrame {
     private String name;
@@ -34,8 +35,19 @@ public class GameWindow extends JFrame {
         figura1.setIcon(new ImageIcon(triangulo.getImage().getScaledInstance(figura1.getWidth(),figura1.getHeight(), Image.SCALE_SMOOTH)));
         panelGame.add(figura1);
 
+        ActionListener exitButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                Statistics exit = new Statistics();
+                exit.totalFiguresShown();
+                exit.setVisible(true);
+            }
+        };
+        exitButton().addActionListener(exitButton);
 
     }
+
     //LABEL PARA MOSTRAR EL NOMBRE DEL JUGADOR EN LA VENTANA DEL JUEGO
     public JLabel playerName () {
             JLabel showName = new JLabel(name);
@@ -66,6 +78,19 @@ public class GameWindow extends JFrame {
             showFailures1.setText("Fallos: "+ "02");
             panelGame.add(showFailures1);
             return showFailures1;
-        };
-    
-};
+        }
+
+        // Button to end the game
+        public JButton exitButton() {
+            JButton exitButton = new JButton("Finalizar");
+            //exitButton.setHorizontalAlignment(SwingConstants.CENTER);
+            exitButton.setBounds(455,100,220,40); //ubicacion y tamano del boton "instrucciones"
+            exitButton.setForeground(Color.white); //Establecer color de la letra
+            exitButton.setFont(new Font("arial",0,30)); //Asignar
+            exitButton.setOpaque(true);
+            exitButton.setBackground(Color.black);
+            panelGame.add(exitButton);
+            return exitButton;
+        }
+
+}
