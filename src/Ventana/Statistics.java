@@ -1,3 +1,4 @@
+// creators: Juan Viedman 2242562 - Daniel Enriquez 2240920
 package Ventana;
 import javax.swing.*;
 import java.awt.*;
@@ -31,4 +32,5 @@ public class Statistics extends JFrame {
         panel.add(figuresShown);
         return figuresShown;
     }
+
 }

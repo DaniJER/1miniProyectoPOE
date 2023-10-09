@@ -1,3 +1,4 @@
+// creators: Juan Viedman 2242562 - Daniel Enriquez 2240920
 package Ventana;
 
 import javax.swing.*;
@@ -45,7 +46,6 @@ public class GameWindow extends JFrame {
             }
         };
         exitButton().addActionListener(exitButton);
-
     }
 
     //LABEL PARA MOSTRAR EL NOMBRE DEL JUGADOR EN LA VENTANA DEL JUEGO
@@ -92,5 +92,4 @@ public class GameWindow extends JFrame {
             panelGame.add(exitButton);
             return exitButton;
         }
-
 }
